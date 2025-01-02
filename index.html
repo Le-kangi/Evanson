@@ -4,100 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evanson Mwangi - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
         }
+
+        /* Header */
         header {
-            background: #007bff; /* Blue */
+            background: linear-gradient(135deg, #0066cc, #00cc99); /* Gradient */
             color: white;
-            padding: 20px;
+            padding: 30px 0;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin: 0;
+        }
+
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            color: #ff69b4; /* Pink */
+            color: #ff4081; /* Pink */
         }
+
+        /* Hero Section */
         .hero {
             position: relative;
             text-align: center;
             color: white;
             margin-bottom: 20px;
         }
+
         .hero img {
             width: 100%;
-            height: auto;
+            height: 70vh;
+            object-fit: cover;
             filter: brightness(0.5);
         }
+
         .hero h1 {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 3.5em;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
         }
+
+        /* Section Title Styles */
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #0066cc;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Profile */
         .profile {
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
         }
+
         .profile img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #ff69b4; /* Pink */
+            border: 4px solid #ff4081; /* Pink */
         }
-        .about, .skills, .work-history, .contact, .education {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
+
+        /* About Me Section */
+        .about {
             background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            text-align: center;
-            color: #007bff; /* Blue */
+
+        .about p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.8;
         }
-        ul {
+
+        /* Skills Section */
+        .skills {
+            background: white;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills ul {
             list-style-type: none;
             padding: 0;
         }
-        li {
+
+        .skills li {
+            background: #f7f9fc;
+            border: 1px solid #e0e0e0;
             margin: 10px 0;
             padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 1.1em;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #007bff; /* Blue */
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+
+        /* Work History Section */
+        .work-history {
+            background: white;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        .work-history ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .work-history li {
+            margin-bottom: 25px;
+        }
+
+        .work-history li p {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #555;
+        }
+
+        .work-history strong {
+            font-size: 1.1em;
+            color: #0066cc;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f7f9fc;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #ff4081;
+        }
+
         .social-links a {
             margin: 0 10px;
-            color: #007bff; /* Blue */
+            color: #0066cc;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
+
         .social-links a:hover {
-            color: #ff69b4; /* Pink */
+            color: #ff4081;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0066cc, #00cc99);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .skills ul, .work-history ul {
+                padding-left: 20px;
+            }
         }
     </style>
 </head>
@@ -127,11 +247,7 @@
 
 <section class="about" id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m Evanson Mwangi, a passionate web developer and designer with a keen interest in the intersection of technology and business. My journey into the digital realm began with a fascination for web design, where I discovered the power of creating visually appealing and user-friendly websites. I thrive on crafting experiences that not only look great but also function seamlessly.</p>
-    <p>In addition to web design, I have a strong background in economics and statistics. I believe that understanding data is crucial in today’s data-driven world. This knowledge allows me to make informed decisions and create impactful solutions that resonate with users and stakeholders alike. I enjoy analyzing trends and using statistical methods to enhance my projects, ensuring they meet both aesthetic and analytical standards.</p>
-    <p>Programming is another passion of mine. I love the challenge of solving complex problems and bringing ideas to life through code. Whether it’s developing dynamic web applications or diving into backend development, I am always eager to learn new programming languages and frameworks.</p>
-    <p>Moreover, I have a strong interest in marketing. I understand that a beautiful website or application is only effective if it reaches its audience. My goal is to merge my technical skills with marketing strategies to create comprehensive digital solutions that not only engage users but also drive business growth.</p>
-    <p>In my free time, I enjoy staying updated with the latest trends in web technologies and marketing strategies, continually seeking ways to enhance my skills and knowledge. I’m excited about the possibilities that lie ahead and look forward to making meaningful contributions to the field!</p>
+    <p>Hello! I’m Evanson Mwangi, a passionate web developer and designer with a keen interest in the intersection of technology and business...</p>
 </section>
 
 <section class="skills" id="skills">
@@ -154,43 +270,23 @@
     <ul>
         <li>
             <strong>Marketer</strong> - CARSPA AUTOMOTIVE (2024)
-            <p>Developed and implemented marketing strategies to increase brand awareness and drive sales. Analyzed market trends and customer needs to develop targeted campaigns. Collaborated with cross-functional teams to enhance product visibility and customer engagement.</p>
+            <p>Developed and implemented marketing strategies to increase brand awareness and drive sales...</p>
         </li>
         <li>
             <strong>Financial Consultant</strong> - PREMIER CREDIT LTD (2023)
-            <p>Provided expert credit financial advice to clients, including investment strategies, risk management, and financial planning. Conducted comprehensive market analysis and helped clients make informed financial decisions. Developed financial models and forecasts to guide clients in achieving their financial goals.</p>
+            <p>Provided expert financial advice...</p>
         </li>
         <li>
             <strong>Salesperson</strong> - LISAM SOLUTION (2022-2023)
-            <p>Engaged customers to understand their needs and recommend appropriate products and services. Achieved and exceeded sales targets through effective communication and relationship-building. Managed inventory and maintained a high level of customer satisfaction.</p>
-        </li>
-    </ul>
-</section>
-
-<section class="education" id="education">
-    <h2>Education</h2>
-    <ul>
-        <li>
-            <strong>Bachelor of Science in Economics and Statistics</strong><br>
-            University Name, Year - Year<br>
-            Relevant Coursework: 
-            <ul>
-                <li>Microeconomics</li>
-                <li>Macroeconomics</li>
-                <li>Statistical Methods</li>
-                <li>Data Analysis</li>
-                <li>Financial Markets</li>
-                <li>Programming Fundamentals</li>
-            </ul>
+            <p>Engaged customers...</p>
         </li>
     </ul>
 </section>
 
 <section class="contact" id="contact">
     <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, feel free to reach out via <a href="mailto:jobsmwangi8@gmail.com">email</a> or connect with me on <a href="https://linkedin.com" style="color: #007bff;">LinkedIn</a>.</p>
+    <p>If you'd like to get in touch, feel free to reach out via <a href="mailto:jobsmwangi8@gmail.com">email</a> or connect with me on <a href="https://linkedin.com">LinkedIn</a>.</p>
     <div class="social-links">
-        <h3>Connect with me:</h3>
         <a href="https://github.com/Le-kangi/" target="_blank">GitHub</a>
         <a href="https://linkedin.com" target="_blank">LinkedIn</a>
     </div>
