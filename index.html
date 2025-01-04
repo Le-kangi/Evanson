@@ -6,354 +6,1312 @@
     <title>Evanson Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap" rel="stylesheet">
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 
-        body {
-            font-family: 'Work Sans', sans-serif;
-            line-height: 1.5;
-            color: #333;
-        }
+  .nav-container {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    font-family: Work Sans, sans-serif;
+    color: rgba(51, 51, 51, 1);
+    font-weight: 600;
+    justify-content: space-between;
+    padding: 15px 68px;
+  }
 
-        /* Accessibility */
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
+  .brand-container {
+    display: flex;
+    gap: 6px;
+    white-space: nowrap;
+    font: 900 25px/1 Zen Kaku Gothic Antique, -apple-system, Roboto, Helvetica, sans-serif;
+  }
 
-        /* Layout */
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+  .brand-logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 50px;
+  }
 
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+  .brand-name {
+    margin: auto 0;
+  }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    margin: auto 0;
+  }
 
-        .logo {
-            width: 50px;
-            height: 50px;
-        }
+  .nav-item {
+    flex-grow: 1;
+  }
 
-        .brand-name {
-            font-family: 'Zen Kaku Gothic Antique', sans-serif;
-            font-weight: 900;
-            font-size: 1.5rem;
-        }
+  .chat-button {
+    align-self: stretch;
+    border-radius: 50px;
+    background-color: rgba(0, 119, 255, 1);
+    min-height: 50px;
+    gap: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+  }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+  @media (max-width: 991px) {
+    .nav-container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
 
-        .nav-link {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+    .brand-container {
+      white-space: initial;
+    }
 
-        .nav-link:hover,
-        .nav-link:focus {
-            color: #0077ff;
-        }
+    .nav-links {
+      max-width: 100%;
+    }
 
-        .btn {
-            padding: 0.875rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: 1rem;
-        }
+    .chat-button {
+      padding: 0 20px;
+    }
+    hero-section {
+    align-self: center;
+    margin-top: 113px;
+    width: 1277px;
+    max-width: 100%;
+  }
+  .hero-content-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  .hero-left-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 56%;
+    margin-left: 0px;
+  }
+  .hero-text-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: start;
+    margin: auto 0;
+    font: 600 25px Work Sans, sans-serif;
+  }
+  .hero-welcome {
+    color: rgba(34, 34, 34, 1);
+    position: relative;
+  }
+  .hero-intro {
+    color: rgba(34, 34, 34, 1);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 75px;
+    align-self: stretch;
+    margin-top: 10px;
+  }
+  .hero-name {
+    font-size: 70px;
+    color: rgba(0, 119, 255, 1);
+  }
+  .hero-description {
+    color: rgba(34, 34, 34, 1);
+    font-weight: 400;
+    line-height: 35px;
+    margin-top: 10px;
+    width: 545px;
+  }
+  .cta-wrapper {
+    display: flex;
+    margin-top: 50px;
+    width: 447px;
+    max-width: 100%;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+  }
+  .cta-primary {
+    align-self: stretch;
+    border-radius: 50px;
+    background-color: rgba(0, 119, 255, 1);
+    min-height: 50px;
+    gap: 10px;
+    color: rgba(255, 255, 255, 1);
+    padding: 14px 33px;
+    border: none;
+    cursor: pointer;
+  }
+  .cta-secondary {
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    gap: 15px;
+    color: rgba(0, 119, 255, 1);
+    justify-content: center;
+    padding: 14px 33px;
+    border: 1px solid rgba(0, 119, 255, 1);
+    cursor: pointer;
+  }
+  .cta-text {
+    align-self: stretch;
+    margin: auto 0;
+  }
+  .download-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  .hero-right-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 44%;
+    margin-left: 20px;
+  }
+  .hero-image {
+    aspect-ratio: 0.99;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 300px;
+    flex-grow: 1;
+  }
+  @media (max-width: 991px) {
+    .hero-section {
+      margin-top: 40px;
+    }
+    .hero-content-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+    .hero-left-column {
+      width: 100%;
+    }
+    .hero-text-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .hero-intro {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 56px;
+    }
+    .hero-description {
+      max-width: 100%;
+    }
+    .cta-wrapper {
+      margin-top: 40px;
+    }
+    .cta-primary {
+      padding: 0 20px;
+    }
+    .cta-secondary {
+      padding: 0 20px;
+    }
+    .hero-right-column {
+      width: 100%;
+    }
+    .hero-image {
+      max-width: 100%;
+      margin-top: 21px;
+    }
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  }
+    .software-partners {
+    background-color: rgba(248, 248, 248, 1);
+    display: flex;
+    margin-top: 100px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 65px 23px 65px 80px;
+  }
 
-        .btn-primary {
-            background: #0077ff;
-            color: #fff;
-        }
+  .partner-logo {
+    aspect-ratio: 5.35;
+    object-fit: contain;
+    object-position: center;
+    width: 267px;
+    background-blend-mode: multiply;
+    max-width: 100%;
+  }
 
-        .btn-primary:hover {
-            background: #0066dd;
-        }
+  .partner-logo-last {
+    aspect-ratio: 5.35;
+    object-fit: contain;
+    object-position: center;
+    width: 268px;
+    background-blend-mode: multiply;
+    max-width: 100%;
+  }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #0077ff;
-            color: #0077ff;
-        }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
 
-        .btn-outline:hover {
-            background: #0077ff;
-            color: #fff;
-        }
+  @media (max-width: 991px) {
+    .software-partners {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+     .profile-container {
+    align-self: center;
+    width: 1278px;
+    max-width: 100%;
+  }
+  .profile-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0;
+  }
+  .profile-image {
+    aspect-ratio: 1.01;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 300px;
+  }
+  .content-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+  .content-wrapper {
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .title {
+    color: #222;
+    align-self: start;
+    font: 700 50px Work Sans, sans-serif;
+  }
+  .title-highlight {
+    color: #0077ff;
+  }
+  .description {
+    color: #222;
+    margin-top: 25px;
+    font: 400 18px/25px Work Sans, sans-serif;
+  }
+  .name-highlight {
+    font-weight: 700;
+    color: #222;
+  }
+  .nav-buttons {
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+    gap: 20px;
+    color: #0077ff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 600 20px Work Sans, sans-serif;
+  }
+  .btn-primary {
+    align-self: stretch;
+    border-radius: 50px;
+    background-color: #0077ff;
+    min-height: 50px;
+    gap: 10px;
+    color: #fff;
+    padding: 14px 31px;
+  }
+  .btn-outline {
+    align-self: stretch;
+    border-radius: 50px;
+    background-color: #fff;
+    min-height: 50px;
+    gap: 15px;
+    white-space: nowrap;
+    padding: 14px 33px;
+    border: 1px solid #0077ff;
+  }
+  .skill-title {
+    color: #222;
+    align-self: start;
+    margin-top: 45px;
+    font: 600 20px Work Sans, sans-serif;
+  }
+  .skill-bar-container {
+    border-radius: 10px;
+    background-color: #eee;
+    display: flex;
+    margin-top: 9px;
+    flex-direction: column;
+  }
+  .skill-bar {
+    border-radius: 10px;
+    background-color: #0077ff;
+    display: flex;
+    height: 17px;
+  }
+  .skill-bar-full {
+    width: 504px;
+    max-width: 100%;
+  }
+  @media (max-width: 991px) {
+    .profile-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .image-column {
+      width: 100%;
+    }
+    .profile-image {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    .content-column {
+      width: 100%;
+    }
+    .content-wrapper {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .title {
+      max-width: 100%;
+      font-size: 40px;
+    }
+    .description {
+      max-width: 100%;
+    }
+    .nav-buttons {
+      max-width: 100%;
+      margin: 40px 8px 0 0;
+    }
+    .btn-primary {
+      padding: 0 20px;
+    }
+    .btn-outline {
+      white-space: initial;
+      padding: 0 20px;
+    }
+    .skill-title {
+      margin-top: 40px;
+    }
+    .skill-bar-container {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+    .skill-bar {
+      max-width: 100%;
+    }
+  }
+    .services-section {
+    background: #fff;
+    display: flex;
+    margin-top: 100px;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 100px 0 100px 80px;
+  }
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    flex: 1 0 0;
+  }
+  .section-label {
+    color: #0078ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font: 600 20px Work Sans, sans-serif;
+  }
+  .section-title {
+    color: #222;
+    margin: 15px 0;
+    font: 700 50px/1 Work Sans, sans-serif;
+  }
+  .section-title span {
+    color: #0077ff;
+  }
+  .section-description {
+    color: #222;
+    text-align: center;
+    font: 400 18px/25px Work Sans, sans-serif;
+  }
+  .divider {
+    aspect-ratio: 25.64;
+    object-fit: contain;
+    width: 100%;
+    margin: 73px 0 30px;
+  }
+  .services-grid {
+    gap: 20px;
+    display: flex;
+    width: 100%;
+  }
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+  .service-card-blue {
+    border-radius: 10px;
+    background: #0077ff;
+    padding: 30px;
+  }
+  .service-card-white {
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+  }
+  .service-icon {
+    width: 75px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  .service-title {
+    color: #000;
+    letter-spacing: -0.1px;
+    margin: 10px 0;
+    font: 700 25px/30px Work Sans, sans-serif;
+  }
+  .service-title-white {
+    color: #fff;
+  }
+  .service-description {
+    color: #333;
+    letter-spacing: -0.1px;
+    margin: 10px 0;
+    font: 400 18px/28px Work Sans, sans-serif;
+  }
+  .service-description-white {
+    color: #fff;
+  }
+  .learn-more-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0077ff;
+    letter-spacing: -0.1px;
+    margin-top: 10px;
+    font: 400 18px/2 Work Sans, sans-serif;
+  }
+  .learn-more-link-white {
+    color: #fff;
+  }
+  .arrow-icon {
+    width: 26px;
+    aspect-ratio: 1.86;
+    object-fit: contain;
+  }
+  .bottom-card {
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-top: 299px;
+    align-self: end;
+  }
+  .bottom-card-icon {
+    width: 331px;
+    max-width: 100%;
+    aspect-ratio: 3.48;
+    object-fit: contain;
+  }
+  @media (max-width: 991px) {
+    .services-section {
+      padding-left: 20px;
+      margin-top: 40px;
+    }
+    .section-title {
+      max-width: 100%;
+      font-size: 40px;
+    }
+    .section-description {
+      max-width: 100%;
+    }
+    .divider {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .services-grid {
+      flex-direction: column;
+    }
+    .service-card {
+      width: 100%;
+      margin: 15px 0;
+    }
+    .service-card-blue,
+    .service-card-white {
+      padding: 20px;
+    }
+    .bottom-card {
+      margin-top: 40px;
+    }
+  }
+    .achievements {
+  background-color: rgba(0, 119, 255, 1);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px 717px;
+}
 
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
+.section-subtitle {
+  color: rgba(233, 239, 255, 1);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 14px;
+  font: 600 20px Work Sans, sans-serif;
+}
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
+.section-title {
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-top: 24px;
+  font: 700 50px/50px Work Sans, sans-serif;
+}
 
-        .hero-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
+.stats-container {
+  align-self: stretch;
+  margin: 110px 0 -143px;
+}
 
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-        }
+.stats-grid {
+  gap: 20px;
+  display: flex;
+}
 
-        .hero-image {
-            border-radius: 50%;
-            width: 100%;
-            height: auto;
-        }
+.stat-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 25%;
+}
 
-        /* Services Section */
-        .services {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
+.stat-card {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  font-family: Work Sans, sans-serif;
+  color: rgba(51, 51, 51, 1);
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+.stat-number {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
+  align-self: center;
+}
 
-        .service-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+.stat-description {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+}
 
-        /* Portfolio Section */
-        .portfolio {
-            padding: 4rem 0;
-        }
+@media (max-width: 991px) {
+  .achievements {
+    max-width: 100%;
+    padding: 0 20px 100px;
+  }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+  .section-title {
+    font-size: 40px;
+    line-height: 44px;
+  }
 
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+  .stats-container {
+    max-width: 100%;
+    margin: 40px 0 10px;
+  }
 
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
+  .stats-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
 
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-        }
+  .stat-column {
+    width: 100%;
+    margin: 15px 0;
+  }
 
-        /* Contact Section */
-        .contact {
-            padding: 4rem 0;
-            background: #0077ff;
-            color: #fff;
-        }
+  .stat-number {
+    font-size: 40px;
+  }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
+  .stat-card {
+    margin-top: 15px;
+    padding: 20px;
+  }
+}
+    .portfolio-section {
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  margin-top: -567px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+  font: 600 20px Work Sans, sans-serif;
+}
 
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-        }
+.category-label {
+  color: #0078ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-        .form-input {
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
+.portfolio-title {
+  color: #222;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 24px;
+  width: 684px;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+.filter-container {
+  display: flex;
+  margin-top: 50px;
+  width: 1046px;
+  max-width: 100%;
+  gap: 20px;
+  color: #0077ff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-            .hero-buttons {
-                justify-content: center;
-            }
+.filter-btn {
+  align-self: stretch;
+  border-radius: 50px;
+  min-height: 50px;
+  padding: 14px 33px;
+  cursor: pointer;
+}
 
-            .nav-links {
-                display: none;
-            }
+.filter-btn-active {
+  background: #0077ff;
+  color: #fff;
+}
 
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+.filter-btn-inactive {
+  background: #fff;
+  border: 1px solid #0077ff;
+}
 
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
+.portfolio-showcase {
+  aspect-ratio: 1.67;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  align-self: stretch;
+  margin-top: 50px;
+}
 
-            .btn {
-                padding: 0.75rem 1.5rem;
-            }
-        }
+@media (max-width: 991px) {
+  .portfolio-section {
+    max-width: 100%;
+    margin-top: -200px;
+    padding: 0 20px;
+  }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+  .portfolio-title {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 44px;
+  }
 
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
-    </style>
-</head>
-<body>
-    <header class="header container">
-        <div class="logo-container">
-            <img src="logo.svg" alt="Portfolio Logo" class="logo">
-            <span class="brand-name">EVANSON</span>
+  .filter-container {
+    margin-top: 40px;
+  }
+
+  .filter-btn {
+    padding: 14px 20px;
+  }
+
+  .portfolio-showcase {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+     .contact-section {
+    background-color: rgba(0, 119, 255, 1);
+    margin: 32px 0 0;
+    padding: 1px 0;
+  }
+  .contact-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 65%;
+  }
+  .contact-header {
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 98px -89px 0 0;
+  }
+  .header-text {
+    align-self: end;
+    display: flex;
+    margin-right: 132px;
+    flex-direction: column;
+    font-family: Work Sans, sans-serif;
+  }
+  .contact-title {
+    color: rgba(233, 239, 255, 1);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    align-self: center;
+  }
+  .chat-title {
+    color: rgba(255, 255, 255, 1);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .contact-info-wrapper {
+    margin-top: 70px;
+  }
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 74%;
+  }
+  .info-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-family: Work Sans, sans-serif;
+    color: rgba(51, 51, 51, 1);
+  }
+  .contact-card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    align-self: end;
+    display: flex;
+    width: 514px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px 80px 71px 30px;
+  }
+  .phone-info {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  .contact-details {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-top: 40px;
+  }
+  .circle-decoration {
+    background-color: rgba(0, 119, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    margin-top: 89px;
+    width: 169px;
+    height: 160px;
+    border: 40px solid rgba(255, 255, 255, 0.05);
+  }
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 26%;
+    margin-left: 20px;
+  }
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: Work Sans, sans-serif;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  .input-field {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    align-self: stretch;
+    font-size: 16px;
+    color: rgba(102, 102, 102, 1);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    padding: 15px;
+    width: 100%;
+  }
+  .checkbox-input {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 172px;
+    width: 15px;
+    height: 15px;
+  }
+  .submit-button {
+    border-radius: 50px;
+    background-color: rgba(0, 72, 154, 1);
+    margin-top: 15px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    line-height: 1;
+    padding: 17px 33px;
+    border: none;
+    cursor: pointer;
+  }
+  .message-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 35%;
+    margin-left: 20px;
+  }
+  .message-circle {
+    background-color: rgba(0, 119, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: start;
+    color: rgba(102, 102, 102, 1);
+    width: 100%;
+    padding: 275px 80px 275px 0;
+    font: 400 16px/1 Work Sans, sans-serif;
+    border: 80px solid rgba(255, 255, 255, 0.05);
+  }
+  .terms-text {
+    color: rgba(233, 239, 255, 1);
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 16px;
+  }
+  .terms-link {
+    text-decoration: underline;
+    color: rgba(233, 239, 255, 1);
+  }
+  @media (max-width: 991px) {
+    .contact-section {
+      max-width: 100%;
+    }
+    .contact-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .contact-content {
+      width: 100%;
+    }
+    .contact-header {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .header-text {
+      margin-right: 10px;
+    }
+    .chat-title {
+      font-size: 40px;
+    }
+    .contact-info-wrapper {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .info-column {
+      width: 100%;
+    }
+    .info-content {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    .contact-card {
+      padding: 0 20px;
+    }
+    .circle-decoration {
+      margin-top: 40px;
+    }
+    .form-column {
+      width: 100%;
+    }
+    .form-wrapper {
+      margin-top: 30px;
+    }
+    .input-field {
+      padding-right: 20px;
+    }
+    .checkbox-input {
+      margin-top: 40px;
+    }
+    .submit-button {
+      padding: 0 20px;
+    }
+    .message-column {
+      width: 100%;
+    }
+    .message-circle {
+      max-width: 100%;
+      padding: 100px 0;
+    }
+  }
+</style>
+ </head>
+ <body>
+
+<nav class="nav-container">
+  <div class="brand-container">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/671edbfe0268a0611b3c2700f2bda78df25508a1432826a3d8b1411180f2eb53?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="" class="brand-logo" />
+    <div class="brand-name">EVANSON</div>
+  </div>
+  <div class="nav-links">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">About Me</a>
+    <a href="#" class="nav-item">Services</a>
+    <a href="#" class="nav-item">Blog</a>
+    <a href="#" class="nav-item">Contact Me</a>
+  </div>
+  <button class="chat-button" tabindex="0">Let's chat</button>
+</nav>
+   <main>
+     <section class="hero-section">
+  <div class="hero-content-wrapper">
+    <div class="hero-left-column">
+      <div class="hero-text-content">
+        <h1 class="hero-welcome">Welcome to my Portfolio</h1>
+        <p class="hero-intro">
+          Hi I'm
+          <br />
+          <span class="hero-name">Evanson Mwangi</span>
+          Economist and Analyst
+        </p>
+        <p class="hero-description">
+          Collaborating with highly skilled individuals, our agency delivers
+          top-quality services.
+        </p>
+        <div class="cta-wrapper">
+          <button class="cta-primary" tabindex="0">Hire Me!</button>
+          <button class="cta-secondary" tabindex="0">
+            <span class="cta-text">Download CV</span>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/588b30300752ac5afe101ca56a695c881528e7d9a7fbee69f4c43bc023714fd6?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+              class="download-icon"
+              alt="Download CV icon"
+            />
+          </button>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About Me</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact Me</a></li>
-            </ul>
+      </div>
+    </div>
+    <div class="hero-right-column">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/ca9db8047225dde57635c66e559a0a2dc8efd26976046b8f0edafe44c1a11d48?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+        class="hero-image"
+        alt="Evanson Mwangi - Economist and Analyst"
+      />
+    </div>
+  </div>
+       <div class="software-partners">
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/9560885946b0c9602ee0bbb15f2616bf8c2894230e3c06752a631d33c19f3581?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+    class="partner-logo"
+    alt="Software partner company logo"
+  />
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/21ccbf038b00232226f25ff05e20c9b3f25b01e6c0278ed62255289096f22a75?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+    class="partner-logo"
+    alt="Software partner company logo"
+  />
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/74c5cb306fbc90e0667727c266c4fe98dc055290ad603067f261c78dbe2f194d?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+    class="partner-logo"
+    alt="Software partner company logo"
+  />
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/a3f698a7ba426407e321991bbbeafac763216156766c8c123e5fcd66f3d138b4?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+    class="partner-logo"
+    alt="Software partner company logo"
+  />
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/dc1d7d0663017b00dffcc4029016cbfb195f586eae3a70deb7c1d9139be4f209?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+    class="partner-logo-last"
+    alt="Software partner company logo"
+  />
+</div>
+       
+<div class="profile-container">
+  <div class="profile-wrapper">
+    <div class="image-column">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/4ca2bf439f9cc0c94386e549726b4fc005cb940035ca02f72f2867dc79037ab2?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" class="profile-image" alt="Profile photo of Evanson Mwangi" />
+    </div>
+    <div class="content-column">
+      <div class="content-wrapper">
+        <h1 class="title">
+          <span class="title-highlight">Junior Economist</span>
+          <br />
+          Data Analyst
+        </h1>
+        <p class="description">
+          Hello there! I'm
+          <span class="name-highlight">Evanson Mwangi</span>
+          . I specialize in web design and development, Data Analysis, Python and
+          Machine learning and I'm deeply passionate and committed to my craft.
+        </p>
+        <nav class="nav-buttons">
+          <button class="btn-primary" tabindex="0">Main Skills</button>
+          <button class="btn-outline" tabindex="0">Awards</button>
+          <button class="btn-outline" tabindex="0">Education</button>
         </nav>
-        <button class="btn btn-primary">Let's chat</button>
-    </header>
+        <h2 class="skill-title">PYTHON</h2>
+        <div class="skill-bar-container">
+          <div class="skill-bar"></div>
+        </div>
+        <h2 class="skill-title">Web & User Interface Design - Development</h2>
+        <div class="skill-bar-container">
+          <div class="skill-bar"></div>
+        </div>
+        <h2 class="skill-title">Data Analysis And Modelling</h2>
+        <div class="skill-bar-container">
+          <div class="skill-bar skill-bar-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+  <section class="services-section">
+  <div class="services-container">
+    <h3 class="section-label">Services</h3>
+    <h2 class="section-title">Exploring My Design <span>Skills</span></h2>
+    <p class="section-description">We transform your ideas into a distinctive web project that both inspires you and captivates your customers</p>
+    <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/b802401eadc8193210a77aff5fd2a4301b6071185aafdbe28234c1c499ef594d?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="" class="divider" />
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-blue">
+          <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/6e0c1d2d25d25f4c3b1cb6803e0699923395f6ccf6d14d9d72bb57c2a0333b4b?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Website and App Design Icon" class="service-icon" />
+          <h3 class="service-title service-title-white">Website / App Design UX / UI Design</h3>
+          <p class="service-description service-description-white">Creating Engaging Digital Experiences for Websites and Apps through UX/UI Design</p>
+          <a href="#" class="learn-more-link learn-more-link-white" tabindex="0">
+            Learn more
+            <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/009418a07a7139122a546a73f4bcfb0b8ab1b451925dd1ec1f246eaec18d464b?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="" class="arrow-icon" />
+          </a>
+        </div>
+      </div>
 
-    <main>
-        <section id="home" class="hero container animate-fade-in">
-            <div class="hero-content">
-                <span>Welcome to my Portfolio</span>
-                <h1>Hi I'm <span style="color: #0077ff">Evanson Mwangi</span><br>Economist and Analyst</h1>
-                <p>Collaborating with highly skilled individuals, our agency delivers top-quality services.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">Hire Me!</button>
-                    <button class="btn btn-outline">Download CV</button>
+      <div class="service-card">
+        <div class="service-card-white">
+          <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/96b48b5e123bfaf5bdad6fa54ba771dbb8a01486154790b233a67a68013c7a75?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Strategic Marketing Icon" class="service-icon" />
+          <h3 class="service-title">Strategic Marketing and Creative Content</h3>
+          <p class="service-description">Elevating Brands and Engagement through Strategic Marketing and Creative Content</p>
+          <a href="#" class="learn-more-link" tabindex="0">
+            Learn more
+            <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/bec62da0da2843e0b6d44ea85db589de13758e5ceb3d9eefb7367408dd35f52f?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="" class="arrow-icon" />
+          </a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-white">
+          <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/5a463da04f4c3594161c0870a60d0f29411f83c9bd5b754eb19bbe044059e89c?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Lead Generation Icon" class="service-icon" />
+          <h3 class="service-title">Client Lead Generation</h3>
+          <p class="service-description">Unlocking the World of Multivendor eCommerce Websites</p>
+          <a href="#" class="learn-more-link" tabindex="0">
+            Learn more
+            <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/bec62da0da2843e0b6d44ea85db589de13758e5ceb3d9eefb7367408dd35f52f?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="" class="arrow-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>   
+    <section class="achievements">
+  <h3 class="section-subtitle">why hire me ?</h3>
+  <h2 class="section-title">
+    What Sets Me<br>Apart ?
+  </h2>
+  <div class="stats-container">
+    <div class="stats-grid">
+      <div class="stat-column">
+        <div class="stat-card">
+          <span class="stat-number">20+</span>
+          <p class="stat-description">Experience in multiple jobs handling clients.</p>
+        </div>
+      </div>
+      <div class="stat-column">
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <p class="stat-description">Task Delivery</p>
+        </div>
+      </div>
+      <div class="stat-column">
+        <div class="stat-card">
+          <span class="stat-number">>10 M</span>
+          <p class="stat-description">Value Added to Companies that I have worked with</p>
+        </div>
+      </div>
+      <div class="stat-column">
+        <div class="stat-card">
+          <span class="stat-number">+</span>
+          <p class="stat-description">Willing and Curious to<br>Learn</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+     <div class="portfolio-section">
+  <div class="category-label">projects</div>
+  <div class="portfolio-title">
+    Presenting My Design Portfolio and Case Studies
+  </div>
+  <div class="filter-container">
+    <button class="filter-btn filter-btn-active" tabindex="0">All</button>
+    <button class="filter-btn filter-btn-inactive" tabindex="0">UI/UX Design</button>
+    <button class="filter-btn filter-btn-inactive" tabindex="0">Web Development</button>
+    <button class="filter-btn filter-btn-inactive" tabindex="0">Python</button>
+    <button class="filter-btn filter-btn-inactive" tabindex="0">Data Analysis</button>
+  </div>
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/f45b65bc1fc86cb7309cc3c2dcc50363269918ec26fff6018a8e83a6128f9e56?apiKey=af4596ae2df44527a335f5ee97d4bcd7&"
+    class="portfolio-showcase"
+    alt="Portfolio showcase displaying various projects and case studies"
+  />
+</div>
+     <section class="contact-section">
+  <div class="contact-wrapper">
+    <div class="contact-content">
+      <div class="contact-header">
+        <div class="header-text">
+          <h2 class="contact-title">contact me</h2>
+          <h3 class="chat-title">Lets Chat !</h3>
+        </div>
+        <div class="contact-info-wrapper">
+          <div class="info-column">
+            <div class="info-content">
+              <div class="contact-card">
+                <div class="phone-info">
+                  PHONE NO
+                  <br />
+                  0742440052
                 </div>
-            </div>
-            <div class="hero-image-container">
-                <img src="DSC_0923.jpg" alt="Evanson Mwangi" class="hero-image">
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h2>My Services</h2>
-                <div class="services-grid">
-                    <div class="service-card animate-fade-in">
-                        <h3>Web Design</h3>
-                        <p>Creating engaging digital experiences through UX/UI design</p>
-                    </div>
-                    <div class="service-card animate-fade-in">
-                        <h3>Data Analysis</h3>
-                        <p>Transforming data into actionable insights</p>
-                    </div>
-                    <div class="service-card animate-fade-in">
-                        <h3>Economic Research</h3>
-                        <p>Comprehensive economic analysis and research</p>
-                    </div>
+                <div class="contact-details">
+                  Address: Nairobi, Kenya
+                  <br />
+                  Email: jobsmwangi8@gmail.com
+                  <br />
+                  Work Hour: Everyday
                 </div>
+              </div>
+              <div class="circle-decoration"></div>
             </div>
-        </section>
-
-        <section id="portfolio" class="portfolio container">
-            <h2>Recent Work</h2>
-            <div class="portfolio-grid">
-                <article class="portfolio-item animate-fade-in">
-                    <img src="project1.jpg" alt="Project 1">
-                </article>
-                <article class="portfolio-item animate-fade-in">
-                    <img src="project2.jpg" alt="Project 2">
-                </article>
-                <article class="portfolio-item animate-fade-in">
-                    <img src="project3.jpg" alt="Project 3">
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info animate-fade-in">
-                        <h2>Let's Chat!</h2>
-                        <p>Ready to start a project together?</p>
-                    </div>
-                    <form class="contact-form animate-fade-in">
-                        <input type="text" class="form-input" placeholder="Name" required>
-                        <input type="email" class="form-input" placeholder="Email" required>
-                        <textarea class="form-input" placeholder="Message" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="container">
-        <p>&copy; 2024 Evanson Mwangi. All rights reserved.</p>
-    </footer>
-</body>
+          </div>
+          <div class="form-column">
+            <form class="form-wrapper">
+              <label for="nameInput" class="visually-hidden">Name</label>
+              <input type="text" id="nameInput" class="input-field" placeholder="Name*" required aria-label="Name" />
+              <input type="checkbox" id="termsCheckbox" class="checkbox-input" required aria-label="Accept terms and conditions" />
+              <button type="submit" class="submit-button">Send Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-column">
+      <div class="message-circle">
+        <label for="emailInput" class="visually-hidden">Email Address</label>
+        <input type="email" id="emailInput" class="input-field" placeholder="Email Address*" required aria-label="Email Address" />
+        <label for="messageInput" class="visually-hidden">Message</label>
+        <textarea id="messageInput" class="input-field" placeholder="How can I help you?" required aria-label="Message"></textarea>
+        <p class="terms-text">
+          By submitting, i'm agreed to the
+          <a href="https://iteck-html.themescamp.com/home-marketing-startup.html#" class="terms-link" target="_blank">Terms & Conditons</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ </main>
+  </body>
 </html>
