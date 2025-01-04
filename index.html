@@ -3,427 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evanson Mwangi - Portfolio</title>
-<style>
-.portfolio-container {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: center;
-}
+    <title>Evanson Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.header-section {
-  background: #080808;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 80px 45px;
-}
+        body {
+            font-family: 'Work Sans', sans-serif;
+            line-height: 1.5;
+            color: #333;
+        }
 
-.nav-wrapper {
-  border-radius: 0 0 8px 8px;
-  background: #1b1b1b;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 26px 80px;
-}
+        /* Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
 
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  font: 400 14px 'IBM Plex Mono', monospace;
-  color: #9c9c9c;
-}
+        /* Layout */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.nav-link {
-  text-decoration: none;
-  color: inherit;
-}
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-.logo {
-  width: 108px;
-  height: 17px;
-}
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-.hero-section {
-  max-width: 966px;
-  margin: 103px auto 0;
-  display: flex;
-  gap: 20px;
-}
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
 
-.hero-content {
-  flex: 0 0 61%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+        .brand-name {
+            font-family: 'Zen Kaku Gothic Antique', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
 
-.hero-heading {
-  color: #fff;
-  font: 800 44px Raleway, sans-serif;
-  margin: 0 0 10px;
-}
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-.hero-text {
-  color: #9c9c9c;
-  font: 400 14px/24px 'IBM Plex Mono', monospace;
-  letter-spacing: 0.14px;
-  margin: 0 0 30px;
-}
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
 
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #3f8e00;
-  color: #fff;
-  font: 700 16px 'IBM Plex Mono', monospace;
-  padding: 21px 64px;
-  border-radius: 4px;
-  border: 1px solid #62ba1b;
-  box-shadow: 0 8px 30px rgba(63, 142, 0, 0.5);
-  text-decoration: none;
-}
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #0077ff;
+        }
 
-.hero-image {
-  flex: 0 0 39%;
-}
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
 
-.hero-image img {
-  width: 100%;
-  height: auto;
-}
+        .btn-primary {
+            background: #0077ff;
+            color: #fff;
+        }
 
-.partners-section {
-  margin: 34px 0 0 95px;
-}
+        .btn-primary:hover {
+            background: #0066dd;
+        }
 
-.partners-heading {
-  color: #fff;
-  font: 400 14px 'IBM Plex Mono', monospace;
-  margin: 0 0 20px;
-}
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0077ff;
+            color: #0077ff;
+        }
 
-.partners-logos {
-  max-width: 920px;
-  width: 100%;
-  height: auto;
-}
+        .btn-outline:hover {
+            background: #0077ff;
+            color: #fff;
+        }
 
-.section-heading {
-  color: #080808;
-  font: 800 34px Raleway, sans-serif;
-  text-align: center;
-  margin: 80px 0 10px;
-}
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
 
-.section-text {
-  color: #9c9c9c;
-  font: 400 14px/24px 'IBM Plex Mono', monospace;
-  text-align: center;
-  letter-spacing: 0.14px;
-  max-width: 570px;
-  margin: 0 auto;
-}
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
 
-.case-studies {
-  max-width: 892px;
-  margin: 60px auto;
-}
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
 
-.case-study {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 80px;
-}
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
 
-.case-content {
-  flex: 0 0 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+        .hero-image {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+        }
 
-.case-tag {
-  display: inline-block;
-  padding: 0 10px;
-  border-radius: 60px;
-  font: 700 12px 'IBM Plex Mono', monospace;
-  line-height: 24px;
-  letter-spacing: 0.12px;
-}
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
 
-.tag-fintech {
-  background: #fff6e9;
-  color: #ffa217;
-}
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-.tag-edtech {
-  background: #d0e6ff;
-  color: #000aff;
-}
+        .service-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.tag-pharma {
-  background: #e0fff8;
-  color: #2ab090;
-}
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 0;
+        }
 
-.case-title {
-  color: #080808;
-  font: 800 24px Raleway, sans-serif;
-  margin: 20px 0;
-}
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-.case-description {
-  color: #9c9c9c;
-  font: 400 14px/24px 'IBM Plex Mono', monospace;
-  letter-spacing: 0.14px;
-  margin: 0 0 40px;
-}
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
 
-.case-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 24px;
-  border-radius: 4px;
-  font: 700 14px 'IBM Plex Mono', monospace;
-  color: #fff;
-  text-decoration: none;
-}
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
 
-.link-fintech {
-  background: #ffa217;
-  box-shadow: 0 8px 30px rgba(42, 176, 144, 0.1);
-}
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
 
-.link-edtech {
-  background: #000aff;
-  box-shadow: 0 8px 30px rgba(0, 10, 255, 0.1);
-}
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: #0077ff;
+            color: #fff;
+        }
 
-.link-pharma {
-  background: #2ab090;
-  box-shadow: 0 8px 30px rgba(42, 176, 144, 0.1);
-}
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
 
-.case-image {
-  flex: 0 0 50%;
-}
+        .contact-form {
+            display: grid;
+            gap: 1rem;
+        }
 
-.case-image img {
-  width: 100%;
-  height: auto;
-}
+        .form-input {
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
 
-.contact-section {
-  background: #080808;
-  width: 100%;
-  padding: 81px 80px;
-  text-align: center;
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-.contact-form {
-  max-width: 570px;
-  margin: 0 auto;
-}
+            .hero-buttons {
+                justify-content: center;
+            }
 
-.form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
+            .nav-links {
+                display: none;
+            }
 
-.form-label {
-  display: block;
-  color: #fff;
-  font: 600 12px 'IBM Plex Mono', monospace;
-  margin-bottom: 5px;
-}
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-.form-input {
-  width: 100%;
-  padding: 0 12px;
-  height: 40px;
-  border: 1px solid #d8d8d8;
-  border-radius: 4px;
-  background: #f8f8f8;
-  color: #757575;
-  font: 400 12px/21px 'IBM Plex Mono', monospace;
-}
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
 
-.form-textarea {
-  height: 120px;
-  resize: vertical;
-}
+            .btn {
+                padding: 0.75rem 1.5rem;
+            }
+        }
 
-.submit-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #3f8e00;
-  color: #fff;
-  font: 700 14px 'IBM Plex Mono', monospace;
-  padding: 16px 24px;
-  border: 1px solid #62ba1b;
-  border-radius: 4px;
-  box-shadow: 0 8px 30px rgba(63, 142, 0, 0.3);
-  cursor: pointer;
-  width: 350px;
-  justify-content: center;
-}
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.footer {
-  background: #1b1b1b;
-  color: #9c9c9c;
-  text-align: center;
-  padding: 26px 80px;
-  font: 400 14px 'IBM Plex Mono', monospace;
-  letter-spacing: 0.14px;
-}
-
-@media (max-width: 991px) {
-  .header-section,
-  .nav-wrapper,
-  .contact-section,
-  .footer {
-    padding: 0 20px;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    margin-top: 40px;
-  }
-
-  .hero-content,
-  .hero-image {
-    flex: 0 0 100%;
-  }
-
-  .case-study {
-    flex-direction: column;
-  }
-
-  .case-content,
-  .case-image {
-    flex: 0 0 100%;
-  }
-
-  .partners-section {
-    margin-left: 10px;
-  }
-
-  .cta-button,
-  .case-link,
-  .submit-button {
-    padding: 0 20px;
-  }
-}
-</style>
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+    </style>
 </head>
 <body>
-<div class="portfolio-container">
-  <header class="header-section">
-    <nav class="nav-wrapper">
-      <div class="nav-menu">
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Experience</a>
-        <a href="#" class="nav-link">Skills</a>
-        <a href="#" class="nav-link">Recent work</a>
-        <a href="#" class="nav-link">Get In Touch</a>
-      </div>
-      <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/3c01ab42c5256028e2f6f00a6db97f41f4bd4207198bd69350fdaebff487eff3?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Portfolio Logo" class="logo">
-    </nav>
+    <header class="header container">
+        <div class="logo-container">
+            <img src="logo.svg" alt="Portfolio Logo" class="logo">
+            <span class="brand-name">EVANSON</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+        </nav>
+        <button class="btn btn-primary">Let's chat</button>
+    </header>
 
-    <div class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-heading">EVANSON MWANGI</h1>
-        <p class="hero-text">Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#contact" class="cta-button">Let's get started</a>
-      </div>
-      <div class="hero-image">
-        <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/b0c01d30b5135b2bdf9e54011539e63283a328d30e259d3166119ca468202b8f?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Profile Image">
-      </div>
-    </div>
+    <main>
+        <section id="home" class="hero container animate-fade-in">
+            <div class="hero-content">
+                <span>Welcome to my Portfolio</span>
+                <h1>Hi I'm <span style="color: #0077ff">Evanson Mwangi</span><br>Economist and Analyst</h1>
+                <p>Collaborating with highly skilled individuals, our agency delivers top-quality services.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Hire Me!</button>
+                    <button class="btn btn-outline">Download CV</button>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="profile.jpg" alt="Evanson Mwangi" class="hero-image">
+            </div>
+        </section>
 
-    <div class="partners-section">
-      <h2 class="partners-heading">Worked with</h2>
-      <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/b0c4af74e3bce2a738c3c49ae03d1aab414e5e66dd2ce146c2b2e8a86a1b9c92?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Partner Logos" class="partners-logos">
-    </div>
-  </header>
+        <section id="services" class="services">
+            <div class="container">
+                <h2>My Services</h2>
+                <div class="services-grid">
+                    <div class="service-card animate-fade-in">
+                        <h3>Web Design</h3>
+                        <p>Creating engaging digital experiences through UX/UI design</p>
+                    </div>
+                    <div class="service-card animate-fade-in">
+                        <h3>Data Analysis</h3>
+                        <p>Transforming data into actionable insights</p>
+                    </div>
+                    <div class="service-card animate-fade-in">
+                        <h3>Economic Research</h3>
+                        <p>Comprehensive economic analysis and research</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="case-studies">
-    <h2 class="section-heading">Case Studies</h2>
-    <p class="section-text">Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <section id="portfolio" class="portfolio container">
+            <h2>Recent Work</h2>
+            <div class="portfolio-grid">
+                <article class="portfolio-item animate-fade-in">
+                    <img src="project1.jpg" alt="Project 1">
+                </article>
+                <article class="portfolio-item animate-fade-in">
+                    <img src="project2.jpg" alt="Project 2">
+                </article>
+                <article class="portfolio-item animate-fade-in">
+                    <img src="project3.jpg" alt="Project 3">
+                </article>
+            </div>
+        </section>
 
-    <div class="case-study">
-      <div class="case-content">
-        <span class="case-tag tag-fintech">Fintech</span>
-        <h3 class="case-title">Work name here</h3>
-        <p class="case-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        <a href="#" class="case-link link-fintech">View case study</a>
-      </div>
-      <div class="case-image">
-        <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/1b8765bacd11429ed2610e913d529ebc4acd55064e37e73cef98255b75f4d86c?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Fintech Case Study">
-      </div>
-    </div>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info animate-fade-in">
+                        <h2>Let's Chat!</h2>
+                        <p>Ready to start a project together?</p>
+                    </div>
+                    <form class="contact-form animate-fade-in">
+                        <input type="text" class="form-input" placeholder="Name" required>
+                        <input type="email" class="form-input" placeholder="Email" required>
+                        <textarea class="form-input" placeholder="Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="case-study">
-      <div class="case-image">
-        <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/511315100c0bfcfce5b116d849e336d4166d88d5bb4b2136b215414e12ab20b7?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="EdTech Case Study">
-      </div>
-      <div class="case-content">
-        <span class="case-tag tag-edtech">EdTech</span>
-        <h3 class="case-title">Work name here</h3>
-        <p class="case-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        <a href="#" class="case-link link-edtech">View case study</a>
-      </div>
-    </div>
-
-    <div class="case-study">
-      <div class="case-content">
-        <span class="case-tag tag-pharma">Pharma</span>
-        <h3 class="case-title">Work name here</h3>
-        <p class="case-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        <a href="#" class="case-link link-pharma">View case study</a>
-      </div>
-      <div class="case-image">
-        <img src="https://cdn.builder.io/api/v1/image/assets/af4596ae2df44527a335f5ee97d4bcd7/83f43318a6938bd2553b7a7555bf3cbedefd9f3afca295b5d8d51bedfd12dea4?apiKey=af4596ae2df44527a335f5ee97d4bcd7&" alt="Pharma Case Study">
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contact">
-    <form class="contact-form">
-      <h2 class="section-heading" style="color: #fff;">Get In Touch</h2>
-      <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
-      <div class="form-group">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" id="email" class="form-input" placeholder="Please enter your email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="mobile" class="form-label">Mobile</label>
-        <input type="tel" id="mobile" class="form-input" placeholder="Enter mobile" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message" class="form-label">Message</label>
-        <textarea id="message" class="form-input form-textarea" placeholder="Enter your message" required></textarea>
-      </div>
-
-      <button type="submit" class="submit-button">Submit</button>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <p>Made with ❤️</p>
-  </footer>
-</div>
+    <footer class="container">
+        <p>&copy; 2024 Evanson Mwangi. All rights reserved.</p>
+    </footer>
 </body>
 </html>
