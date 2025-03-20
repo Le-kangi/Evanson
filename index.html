@@ -1,38 +1,13 @@
 <!doctype html>
 <html lang="en">
- <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evanson Mwangi - Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Raleway:wght@800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "IBM Plex Mono", monospace;
-        background-color: rgba(8, 8, 8, 1);
-        color: rgba(156, 156, 156, 1);
-      }
-
-      .portfolio-container {
-        background-color: rgba(8, 8, 8, 1);
-        display: flex;
-        width: 100%;
-        padding-left: 52px;
-        padding-right: 52px;
-        padding-bottom: 45px;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .navbar {
+    <title>Profile Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .navbar {
         border-radius: 0 0 8px 8px;
         background-color: rgba(27, 27, 27, 1);
         align-self: stretch;
@@ -62,234 +37,9 @@
         cursor: pointer;
       }
 
-      .logo {
-        aspect-ratio: 6.37;
-        object-fit: contain;
-        object-position: center;
-        width: 108px;
-        flex-shrink: 0;
-        max-width: 100%;
-      }
-
-      .hero-section {
-        margin-top: 103px;
-        margin-left: 25px;
-        width: 100%;
-        max-width: 966px;
-      }
-
-      .hero-content {
-        gap: 20px;
-        display: flex;
-      }
-
-      .info-column {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        line-height: normal;
-        width: 61%;
-        margin-left: 0;
-      }
-
-      .info-content {
-        display: flex;
-        margin-top: 28px;
-        flex-grow: 1;
-        padding-bottom: 17px;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .header-content {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-      }
-
-      .heading-container {
-        width: 492px;
-        max-width: 100%;
-      }
-
-      .main-heading {
-        width: 426px;
-        max-width: 100%;
-        font-family: "Raleway", sans-serif;
-        font-size: 44px;
-        color: rgba(255, 255, 255, 1);
-        font-weight: 800;
-        padding: 10px 0;
-      }
-
-      .bio-text {
-        margin-top: 10px;
-        width: 100%;
-        font-size: 14px;
-        color: rgba(156, 156, 156, 1);
-        font-weight: 700;
-        letter-spacing: 0.14px;
-        line-height: 24px;
-      }
-
-      .cta-button {
-        border-radius: 4px;
-        background-color: rgba(63, 142, 0, 1);
-        box-shadow: 0px 8px 30px rgba(63, 142, 0, 0.5);
-        border: 1px solid rgba(98, 186, 27, 1);
-        display: flex;
-        margin-top: 30px;
-        padding: 21px 64px;
-        align-items: center;
-        gap: 10px;
-        font-size: 16px;
-        color: rgba(255, 255, 255, 1);
-        font-weight: 700;
-        justify-content: flex-start;
-        cursor: pointer;
-      }
-
-      .cta-text {
-        align-self: stretch;
-        margin: auto 0;
-      }
-
-      .cta-arrow {
-        aspect-ratio: 0.6;
-        object-fit: contain;
-        object-position: center;
-        width: 6px;
-        align-self: stretch;
-        margin: auto 0;
-        flex-shrink: 0;
-      }
-
-      .worked-with {
-        align-self: flex-start;
-        z-index: 10;
-        margin-top: -35px;
-        font-size: 14px;
-        color: rgba(255, 255, 255, 1);
-        font-weight: 400;
-      }
-
-      .image-column {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        line-height: normal;
-        width: 39%;
-        margin-left: 20px;
-      }
-
-      .profile-image {
-        aspect-ratio: 1;
-        object-fit: contain;
-        object-position: center;
-        width: 100%;
-      }
-
-      .partners-logo {
-        aspect-ratio: 15.38;
-        object-fit: contain;
-        object-position: center;
-        width: 920px;
-        max-width: 920px;
-      }
-
-      @media (max-width: 991px) {
-        .portfolio-container {
-          max-width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .navbar {
-          max-width: 100%;
-          padding-right: 20px;
-        }
-
-        .nav-menu {
-          max-width: 100%;
-        }
-
-        .nav-item {
-          white-space: initial;
-        }
-
-        .hero-section {
-          max-width: 100%;
-          margin-top: 40px;
-        }
-
-        .hero-content {
-          flex-direction: column;
-          align-items: stretch;
-          gap: 0;
-        }
-
-        .info-column {
-          width: 100%;
-        }
-
-        .info-content {
-          max-width: 100%;
-          margin-top: 40px;
-        }
-
-        .header-content {
-          max-width: 100%;
-        }
-
-        .main-heading {
-          max-width: 100%;
-        }
-
-        .bio-text {
-          max-width: 100%;
-        }
-
-        .cta-button {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .image-column {
-          width: 100%;
-        }
-
-        .profile-image {
-          margin-top: 40px;
-        }
-
-        .partners-logo {
-          max-width: 100%;
-        }
-        .experience-section {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-        }
-
-        .experience-heading {
-          align-self: stretch;
-          margin-top: auto;
-          margin-bottom: auto;
-          font-weight: bold;
-          font-size: 1.25rem;
-        }
-
-        @media (max-width: 991px) {
-          .experience-heading {
-            max-width: 100%;
-  }      }
-    </style>
-  </head>
+  </style>
   <body>
-    <main class="portfolio-container">
-      <header class="navbar">
+    <header class="navbar">
         <nav class="nav-menu" aria-label="Main navigation">
           <a href="#" class="nav-item">Home</a>
           <a href="#" class="nav-item">Experience</a>
@@ -303,54 +53,45 @@
           class="logo"
         />
       </header>
-
-      <section class="hero-section" aria-label="About Evanson Mwangi">
-        <div class="hero-content">
-          <div class="info-column">
-            <div class="info-content">
-              <div class="header-content">
-                <div class="heading-container">
-                  <h1 class="main-heading">EVANSON MWANGI</h1>
-                  <p class="bio-text">
-                    I am a committed, versatile, and innovative professional
-                    with a proven track record in asset
-                    <br />
-                    finance, sales, marketing, and lead generation with an
-                    educational background in BSc in
-                    <br />
-                    Economics and Statistics. I am also deeply passionate and
-                    interested in programming, software
-                    <br />
-                    development, data analysis, and artificial intelligence,
-                    constantly driven by curiosity and a
-                    <br />
-                    desire to learn more in these fields.
-                  </p>
-                </div>
-                <button
-                  class="cta-button"
-                  aria-label="Get started with Evanson Mwangi"
-                >
-                  <span class="cta-text">Let's get started</span>
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f46dc15756f00adf5d897f793bd22aa906d405c3?placeholderIfAbsent=true&apiKey=af4596ae2df44527a335f5ee97d4bcd7"
-                    alt="Arrow"
-                    class="cta-arrow"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="image-column">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7068b685d59e693236b5f7c46973f406a5480df?placeholderIfAbsent=true&apiKey=af4596ae2df44527a335f5ee97d4bcd7"
-              alt="Evanson Mwangi profile"
-              class="profile-image"
-            />
-          </div>
+    <section
+      class="px-32 py-16 bg-black max-md:p-10 max-sm:p-5"
+      aria-label="Profile Introduction"
+    >
+      <div
+        class="flex gap-10 justify-between items-center max-md:flex-col-reverse max-md:text-center"
+      >
+        <div class="flex-1">
+          <h1 class="mb-5 text-3xl font-extrabold text-white max-sm:text-2xl">
+            EVANSON MWANGI
+          </h1>
+          <p class="mb-5 text-base leading-relaxed text-white">
+            I am a scientist, researcher, and innovation professional with a
+            proven track record in excel. Experienced in developing and
+            implementing next generation data at an enterprise level.
+          </p>
+          <p class="mb-5 text-base leading-relaxed text-white">
+            I am passionate about data analytics, artificial intelligence in
+            development, software development, data analytics, and artificial
+            intelligence. I am always looking for opportunities to learn more in
+            these fields.
+          </p>
+          <button
+            class="px-6 py-3 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-black transition-colors"
+            aria-label="Get Started"
+          >
+            Let's get started!
+          </button>
         </div>
-      </section>
-      
+        <div>
+          <img
+            src="DSC_0923.jpg"
+            alt="Profile photo of Evanson Mwangi"
+            class="rounded-full h-[200px] w-[200px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
      <section
       class="px-32 py-16 bg-black max-md:p-10 max-sm:p-5"
       aria-labelledby="professional-experience-heading"
@@ -618,3 +359,4 @@
 
   </body>
 </html>
+
